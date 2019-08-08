@@ -1,0 +1,3 @@
+<!--pages/components/likes.wxml-->
+<!-- <text>星形评级页面</text> -->
+<image src="images/like.png" class='container_wrapper'></image>

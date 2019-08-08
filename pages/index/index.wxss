@@ -1,0 +1,77 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/* pages/linproject/index.wxss */
+/* flex container flex item */
+/* 弹性布局flex 块状元素 */
+/* 2默认横向纵向设置
+  flex-direction  column row
+flex-direction:row-reverse;
+flex-direction:column-reverse;
+③对齐方式
+justity-content
+ */
+
+.chunk{
+  width: 100px;
+  height: 100px;
+ 
+}
+.container-wrapper{
+  display: flex;
+  /* 垂直 */
+  /* flex-direction:column; */
+/* 水平*/
+  /* flex-direction:column-reverse; 
+  垂直对齐
+  jusity-content:flex-start flex-end center
+  space-between space-around
+  align-items:flex-start center flex-end
+  stretch baseline(文字基线对齐不一定元素会对齐)
+  主轴和交叉看垂直还是水平
+  主轴和交叉
+  
+  盒子模型消除间距
+  flex-wrap:nowrap不换行 wrap
+  注：设置外围的高度等于盒子的高度
+  */
+  flex-direction:row-reverse;
+  justify-content:center;
+  align-items:center;
+  flex-wrap: wrap;
+
+
+}
+.color1{
+  width: 150px;
+  height: 150px;
+  background: aqua;
+}
+.color2{
+  width: 150px;
+  height: 150px;
+  background: blue;
+}
+.color3{
+  width: 150px;
+  height: 150px;
+  background: brown;
+}

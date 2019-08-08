@@ -1,0 +1,11 @@
+<!--pages/linproject/index.wxml-->
+<!-- 用户组件填充wxml -->
+<!-- 代码规范 -->
+<!-- js规范命名用驼峰 js后面不然都不加分号不然都加分号-->
+<!-- 文件命名统一用连接符号 -->
+<!-- <text>pages/linproject/index.wxml</text> -->
+<!-- <view class="chunk"></view>
+<view></view>
+<view></view> -->
+<!-- 使用组件 -->
+<likes-cmp />

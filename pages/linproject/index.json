@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "likes-cmp":"/components/likes/index"
+  }
+}

@@ -1,0 +1,6 @@
+/* pages/linproject/index.wxss */
+.chunk{
+  width: 100px;
+  height: 100px;
+  background: brown;
+}

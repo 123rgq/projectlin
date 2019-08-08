@@ -1,0 +1,5 @@
+/* pages/components/likes.wxss */
+.container_wrapper{
+  height: 28rpx;
+  width: 32rpx;
+}
