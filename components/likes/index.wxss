@@ -1,5 +1,24 @@
 /* pages/components/likes.wxss */
 .container_wrapper{
+  /* display: inline-flex; */
+  display:flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 90rpx;
+}
+.container_wrapper image{
+  display: block;
   height: 28rpx;
   width: 32rpx;
+}
+.container_wrapper text{
+  /*苹方和思源*/
+  font-family: 'PingFangSC-Thin';
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #bbb;
+  position: relative;
+  bottom: 10rpx;
+  left: 6rpx;
+
 }

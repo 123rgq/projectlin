@@ -1,5 +1,11 @@
 /**app.wxss**/
-.container {
+/* 全局样式 */
+page{
+   font-family: 'PingFangSC-Thin';
+   font-size: 32rpx;
+   /* 只有少数样式组件继承样式文字和字体 */
+}
+/* .container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -7,4 +13,4 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}  */

@@ -1,3 +1,6 @@
 <!--pages/components/likes.wxml-->
 <!-- <text>星形评级页面</text> -->
-<image src="images/like.png" class='container_wrapper'></image>
+<view  class='container_wrapper'>
+  <image src="images/like.png"></image>
+  <text>9</text>
+</view>
