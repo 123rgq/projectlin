@@ -8,4 +8,5 @@
 <view></view>
 <view></view> -->
 <!-- 使用组件 -->
-<likes-cmp />
+<likes-cmp bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}"/>
+<movie-cmp img="{{classic.image}}" content="{{classic.content}}"/>

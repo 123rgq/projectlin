@@ -4,3 +4,74 @@
   height: 100px;
   background: brown;
 }
+
+.banner{
+  height: auto;
+  position: relative;  
+}
+ 
+.bannerswipers{  
+  width: 100%;
+  height: 350rpx; 
+}  
+.bannerswipers image{  
+  width: 100%;
+  height: 100%;
+  display: block 
+}  
+ 
+/*用来包裹所有的小圆点  */
+.bannerdots{  
+  width: 750rpx;
+  height: 36rpx; 
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left:0;
+  bottom: 20rpx;
+}  
+/*未选中时的小圆点样式 */
+.bannerdot{  
+  width: 16rpx;  
+  height: 16rpx;   
+  margin-right: 26rpx;
+  background-color: yellow;
+  border-radius: 16rpx;
+}  
+/*选中以后的小圆点样式  */
+.banneractive{  
+  width: 32rpx;   
+  height: 16rpx;
+  background-color: coral;
+}  
+ 
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  display: box;
+  flex-wrap: wrap;
+}
+ 
+.alignC {
+  /*元素居中*/
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+}
+.flexC {
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+}
+.bgcolor{
+  background: #ccc;
+}

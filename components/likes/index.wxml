@@ -1,6 +1,7 @@
 <!--pages/components/likes.wxml-->
 <!-- <text>星形评级页面</text> -->
-<view  class='container_wrapper'>
-  <image src="images/like.png"></image>
-  <text>9</text>
+<!-- bind:tap（不阻止冒泡） 和catch:tap（阻止冒泡） -->
+<view  class='container_wrapper' bind:tap="onLike">
+  <image src="{{like?yesSrc :noSrc}}"></image>
+  <text>{{count}}</text>
 </view>
