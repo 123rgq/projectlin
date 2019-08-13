@@ -31,7 +31,6 @@ Component({
   methods:{
     onLike:function(event){
       // 自定义事件
-
       let like = this.properties.like
       let count = this.properties.count
       count = like?count-1:count+1
@@ -41,6 +40,8 @@ Component({
       });
       console.log(event);
       //激活
+      // 组件间通信
+      // triggerEvent (触发事件bubbles事件是否冒泡，composed事件是否穿越组件边界capturePhase事件捕获阶段)
       let behavior = this.properties.like?'like':'cancel'
       // 激活
       this.triggerEvent('like',{

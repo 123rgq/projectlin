@@ -12,11 +12,9 @@ Page({
    */
   data: {
     classic:null,
-    imgs: [
-      { url: 'http://demo.sc.chinaz.com/Files/DownLoad/webjs1/201801/jiaoben5647/img/5.jpg' },
-      { url: 'http://demo.sc.chinaz.com/Files/DownLoad/webjs1/201801/jiaoben5647/img/1.jpg' },
-      { url: 'http://demo.sc.chinaz.com/Files/DownLoad/webjs1/201801/jiaoben5647/img/2.jpg' }
-    ],
+  //  期刊默认值
+    latest:true,
+    first:false
 
   },
   // 事件
@@ -25,6 +23,14 @@ Page({
     let behavior = event.detail.behavior
     console.log(behavior + ' behavior' + event);
     likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
+  },
+  // 首页音乐切换
+  onLike:function(event){},
+  onPrevious:function(event){
+    let index = this.data.classic.index
+    classicModel.getPrevious(index,(res)=>{
+      consle.log(res);
+    });
   },
   /**
    * 生命周期函数--监听页面加载

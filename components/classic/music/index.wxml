@@ -1,0 +1,8 @@
+<!--components/classic/music/index.wxml-->
+<!-- <text>components/classic/music/index.wxml</text> -->
+<view>
+  <image src="img"/>
+  <image src="playSrc"/>
+  <image src="images/music@tag.png"/>
+  <text>{{content}}</text>
+</view>

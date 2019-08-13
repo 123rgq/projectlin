@@ -8,5 +8,12 @@
 <view></view>
 <view></view> -->
 <!-- 使用组件 -->
-<likes-cmp bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}"/>
-<movie-cmp img="{{classic.image}}" content="{{classic.content}}"/>
+<view class="container">
+  <view class="header">
+    <epsoide-cmp index="{{classic.index}}"/>
+    <likes-cmp bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}" class="epsoide"/>
+  </view>
+  <movie-cmp img="{{classic.image}}" content="{{classic.content}}"/>
+  <!-- 期刊组件 -->
+  <navi-cmp bind:left="onNext" bind:right="onPrevious" class="navi" title="{{classic.title}}" first="{{first}}" latest="{{latest}}"/>
+</view>

@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "likes-cmp": "/components/likes/index",
-    "movie-cmp":"/components/classic/movie/movie"
+    "movie-cmp":"/components/classic/movie/movie",
+    "epsoide-cmp": "/components/epsoide/index",
+    "navi-cmp": "/components/navi/index"
   }
 }

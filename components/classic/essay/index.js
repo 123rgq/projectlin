@@ -1,4 +1,4 @@
-// components/classic/movie/movie.js
+// components/classic/essay/index.js
 import { classicBeh } from '../../classic-beh.js'
 Component({
   /**
@@ -6,10 +6,10 @@ Component({
    */
   behaviors: [classicBeh],
   properties: {
-    // img:String,
-    // content:String,
-  },  
-
+    // img: String,
+    // content: String
+  },
+  // behavior行为组件共用内容
   /**
    * 组件的初始数据
    */
@@ -21,6 +21,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+
   }
 })

@@ -9,7 +9,7 @@ const tips = {
 class HTTP{
   request(params){
     if(!params.method){
-      params.method = 'GET'
+      params.method = 'GET'               
     }
     wx.request({
       url: config.api_base_url + params.url,

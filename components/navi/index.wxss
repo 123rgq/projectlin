@@ -1,0 +1,19 @@
+/* components/navi/index.wxss */
+/* 触碰区域的增加，体验感，图切大 */
+.container{
+  width:600rpx;
+  height:80rpx;
+  background-color: #f7f7f7;
+  border-radius:2px;
+  display:inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon{
+  height: 80rpx;
+  width: 80rpx;
+}
+.title{
+  font-size: 28rpx;
+}

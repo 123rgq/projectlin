@@ -21,6 +21,16 @@ class ClassicModel extends HTTP {
       }
     })
   }
+  // 获取前一期刊
+  getPrevious(sCallback,index){
+    this.request({
+      url:'classic/' + index + '/previous',
+      success:(res) => {
+        sCallback(res)
+      }
+    })
+  }
 }
+
 
 export { ClassicModel }
