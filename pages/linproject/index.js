@@ -13,8 +13,8 @@ Page({
   data: {
     classic:null,
   //  期刊默认值
-    latest:true,
-    first:false
+    first: false,
+    latest: true,
 
   },
   // 事件
@@ -29,8 +29,17 @@ Page({
   onPrevious:function(event){
     let index = this.data.classic.index
     classicModel.getPrevious(index,(res)=>{
-      consle.log(res);
+      console.log(classicModel.isFirst(res.index) + 'classicModel.isFirst(res.index)' + classicModel.isLatest(res.index));
+      this.setData({
+        classic:res,
+        latest: classicModel.isLatest(res.index),
+        first: classicModel.isFirst(res.index),
+      })
     });
+  },
+  // 左点击
+  onNext:function(event){
+    let index = this.data.classic.index
   },
   /**
    * 生命周期函数--监听页面加载
@@ -43,7 +52,6 @@ Page({
     //   }
     // });
     classicModel.getLatest((res)=>{
-      console.log(res);
       // 数据更新
       this.setData({
         classic:res
@@ -69,6 +77,8 @@ Page({
     //   }
 
     // });
+    // 期刊的最后和最前
+    //  lastestClassic currentClassic currentIndex 数据缓存
   },
 
   /**
