@@ -3,5 +3,5 @@
 <view class="container">
   <image bind:tap="onLeft" src="{{latest?disLeftSrc:leftSrc}}" class="icon"/>
   <text class="title">{{title}}</text>
-  <image bind:tap="onRight" src="{{first?disRightSrc:rightSrc}}" class="icon"/>
+  <image bind:tap="onRight" disable="{{!first}}" src="{{first?disRightSrc:rightSrc}}" class="icon"/>
 </view>

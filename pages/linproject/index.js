@@ -27,19 +27,53 @@ Page({
   // 首页音乐切换
   onLike:function(event){},
   onPrevious:function(event){
-    let index = this.data.classic.index
-    classicModel.getPrevious(index,(res)=>{
-      console.log(classicModel.isFirst(res.index) + 'classicModel.isFirst(res.index)' + classicModel.isLatest(res.index));
-      this.setData({
-        classic:res,
-        latest: classicModel.isLatest(res.index),
-        first: classicModel.isFirst(res.index),
-      })
-    });
+    // let index = this.data.classic.index
+    // classicModel.getPrevious(index,(res)=>{
+    //   console.log(res.index + 'res.index');
+    //   console.log(classicModel.isFirst(res.index) + 'classicModel.isFirst(res.index)' + classicModel.isLatest(res.index));
+    //   console.log(res + 'resprevi')
+    //   this.setData({
+    //     classic:res,
+    //     latest: classicModel.isLatest(res.index),
+    //     first: classicModel.isFirst(res.index),
+    //   })
+    // });
+    this._updateClassic('previous');
   },
   // 左点击
   onNext:function(event){
+    // let index = this.data.classic.index
+    // classicModel.getNext(index, (res) => {
+    //   console.log(classicModel.isLatest(res.index) + 'classicModel.isLatest(res.index)' + classicModel.isLatest(res.index));
+    //   console.log(res + 'res');
+    //   this.setData({
+    //     classic: res,
+    //     latest: classicModel.isLatest(res.index),
+    //     first: classicModel.isFirst(res.index)
+    //   })
+    // });
+    this._updateClassic('next');
+  },
+  // 私有函数
+  // _updateClassic:function(nextOrPrevious){
+  //   let index = this.data.classic.index
+  //   classicModel.getClassic(index, nextOrPrevious, (res) => {
+  //     this.setData({
+  //       classic: res,
+  //       latest: classicModel.isLatest(res.index),
+  //       first: classicModel.isFirst(res.index)
+  //     })
+  //   });
+  // },
+  _updateClassic:function(nextOrPrevious){
     let index = this.data.classic.index
+    classicModel.getClassic(index,nextOrPrevious,(res)=>{
+      this.setData({
+        classic: res,
+        latest: classicModel.isLatest(res.index),
+        first: classicModel.isFirst(res.index)
+      })
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -56,6 +90,7 @@ Page({
       this.setData({
         classic:res
       });
+      // lastestClassic
     });
     // classic.getLatest((res) => {
     //   //this._getLikeStatus(res.id,res.type);
