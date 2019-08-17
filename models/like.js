@@ -7,7 +7,7 @@ class LikeModel extends HTTP {
       url:url,
       method:'POST',
       data:{
-        arc_id:artId,
+        art_id:artId,
         type: category
       }
     })

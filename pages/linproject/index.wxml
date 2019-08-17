@@ -11,9 +11,10 @@
 <view class="container">
   <view class="header">
     <epsoide-cmp index="{{classic.index}}"/>
-    <likes-cmp bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}" class="epsoide"/>
+    <likes-cmp bind:like="onLike" like="{{like_status}}" count="{{fav_nums}}" class="epsoide"/>
   </view>
-  <movie-cmp img="{{classic.image}}" content="{{classic.content}}"/>
+  <!-- 自定义组件添加hidden -->
+  <movie-cmp img="{{classic.image}}" content="{{classic.content}}" hidden="{{true}}"/>
   <!-- 期刊组件 -->
   <navi-cmp bind:left="onNext" bind:right="onPrevious" class="navi" title="{{classic.title}}" first="{{first}}" latest="{{latest}}"/>
 </view>

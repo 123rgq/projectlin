@@ -15,7 +15,8 @@ Page({
   //  期刊默认值
     first: false,
     latest: true,
-
+    likeCount: 0,
+    likeStatus: false
   },
   // 事件
   onLike: function (event){
@@ -25,7 +26,6 @@ Page({
     likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
   },
   // 首页音乐切换
-  onLike:function(event){},
   onPrevious:function(event){
     // let index = this.data.classic.index
     // classicModel.getPrevious(index,(res)=>{
@@ -68,10 +68,20 @@ Page({
   _updateClassic:function(nextOrPrevious){
     let index = this.data.classic.index
     classicModel.getClassic(index,nextOrPrevious,(res)=>{
+      this._getLikeStatus(res.id,res.type)
       this.setData({
         classic: res,
         latest: classicModel.isLatest(res.index),
         first: classicModel.isFirst(res.index)
+      })
+    })
+  },
+
+  _getLikeStatus:function(arctId,category){
+    likeModel.getClassicLikeStatus(arctId, category,(res)=>{
+      this.setData({
+        likeCount:res.fav_nums,
+        likeStatus:res.like_staus
       })
     })
   },
@@ -87,8 +97,12 @@ Page({
     // });
     classicModel.getLatest((res)=>{
       // 数据更新
+      // this._getLikeStatus(res.id,res.type)
       this.setData({
-        classic:res
+        // ...res
+        classic:res,
+        likeCount:res.fav_nums,
+        likeStatus:res.like_staus
       });
       // lastestClassic
     });
